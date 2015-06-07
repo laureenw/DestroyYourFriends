@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mygdx.game.android"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="22" />
+ 	<uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+     <application android:label="@string/app_name"
+                 android:icon="@drawable/logo_appli"
+                 android:name=".WallBreackerApplication">
+        <activity
+            android:name="com.mygdx.game.android.MainActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="landscape"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.mygdx.game.android.PickerActivity"
+                  android:label="@string/app_name" />
+        <activity android:name="com.facebook.LoginActivity"
+                  android:theme="@android:style/Theme.Translucent.NoTitleBar"
+                  android:label="@string/app_name" />
+        <activity android:name="com.mygdx.game.WallBreacker"
+                  android:label="@string/app_name" />
+        <activity android:name="com.mygdx.game.android.LaunchWallBreacker"
+                  android:label="@string/app_name" />
+        <activity android:name="com.mygdx.game.android.SimpleDirectionGestureDetector"
+                  android:label="@string/app_name" />
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/app_id"/>
+    	<provider android:authorities="com.facebook.app.NativeAppCallContentProvider424784004375108"
+                  android:name="com.facebook.NativeAppCallContentProvider"
+                  android:exported="true" />
+    </application>
+
+</manifest>
